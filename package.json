@@ -1,5 +1,5 @@
 {
-  "name": "pxtovw",
+  "name": "pxtovw-loader",
   "version": "1.0.0",
   "description": "px to vw",
   "main": "index.js",
@@ -9,11 +9,15 @@
   "keywords": [
     "css",
     "px",
-    "vw"
+    "vw",
+    "webpack",
+    "loader"
   ],
   "author": "flonny",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "css": "^2.2.4"
+    "css": "^2.2.4",
+    "fs-extra": "^9.0.1",
+    "loader-utils": "^2.0.0"
   }
 }
