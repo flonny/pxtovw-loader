@@ -14,6 +14,7 @@ module.exports = {
       }, {
         loader: 'pxtovw-loader',
         options: {
+          unitToConvert: 'px',
           viewportWidth: 1080,
           unitPrecision: 5,
         }
