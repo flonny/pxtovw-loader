@@ -12,10 +12,11 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^3.6.0",
-    "pxtovw-loader": "^1.2.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
   },
-  "dependencies": {}
+  "dependencies": {
+    "pxtovw-loader": "^1.2.2"
+  }
 }
