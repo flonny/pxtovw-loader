@@ -22,6 +22,7 @@ module.exports = {
            unitToConvert:'px', //Custom conversion unit
            viewportWidth: 1080, //Viewport width
            unitPrecision: 5, //retain decimal places
+           minPixelValue: 2 // minimum conversion value
          }
        }]
      }]
@@ -36,6 +37,6 @@ module.exports = {
 - [x] configure viewport width
 - [x] Customize the unit to be converted
 - [x] Number of reserved digits after conversion
-- [ ] Configure the minimum conversion value
+- [x] Configure the minimum conversion value
 - [ ] Customize the converted viewport unit
 - [ ] Custom ignore selectors
