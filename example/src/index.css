@@ -1,0 +1,29 @@
+div{
+  height: 100px;
+  width: 540px;
+  box-sizing: border-box;
+  border: 5px solid #ddd;
+  top:100px!important
+}
+@media screen and (min-width:1080px) {
+  div{
+    height: 200px;
+    animation: move 10s ease-in;
+    position: absolute;
+      top: calc(100px - 20px)
+  }
+}
+@keyframes move {
+  from {
+    transform: translate(0px, 0px);
+    background-color: #000;
+  }
+  50%{
+    transform: translate(100px, 200px);
+    background-color: #666;
+  }
+  100%{
+    transform: translate(200px, 400px);
+    background-color: #fff;
+  }
+}
