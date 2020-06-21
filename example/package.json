@@ -16,7 +16,5 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
   },
-  "dependencies": {
-    "pxtovw-loader": "^1.2.2"
-  }
+  "dependencies": {}
 }

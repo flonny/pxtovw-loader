@@ -1,6 +1,6 @@
 {
   "name": "pxtovw-loader",
-  "version": "1.3.2",
+  "version": "2.0.0",
   "description": "A plugin for webpack that generates 'vw' from pixel units. ",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "css": "^2.2.4",
-    "loader-utils": "^2.0.0"
+    "loader-utils": "^2.0.0",
+    "pxtovw": "0.0.1"
   }
 }
