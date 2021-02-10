@@ -1,9 +1,13 @@
-# webpack 插件 用于将像素单位转换成 vw
-## 转换代码[pxtovw](https://github.com/flonny/pxToVw)
-## [english README](./README_EN.md)
-## 在项目中使用
+# pxtovw-loader
+> this is a webpack loader of pxtovw
+>
+> [postcss-plugin](https://www.npmjs.com/package/pxtovw-postcss)
 
-```npm
+## Usage
+
+### webpack pxtovw-loader
+
+```bash
 npm install pxtovw-loader -D
 ```
 
@@ -20,10 +24,10 @@ module.exports = {
       }, {
         loader: 'pxtovw-loader',
         options: {
-          unitToConvert: 'px', // 自定义转换单位
-          viewportWidth: 1080, // 视口宽度
-          unitPrecision: 5, // 保留小数位
-          minPixelValue: 2 // 最小转换数值
+          unitToConvert:'px', //Custom conversion unit
+          viewportWidth: 1080, //Viewport width
+          unitPrecision: 5, //retain decimal places
+          minPixelValue: 2 // minimum conversion value
         }
       }]
     }]
@@ -31,9 +35,45 @@ module.exports = {
 }
 ```
 
-- [x] 配置视口宽度
-- [x] 自定义需要转换的单位
-- [x] 转换后数值的保留位数
-- [x] 配置最小转换数值
-- [ ] 自定义转换后的视口单位
-- [ ] 自定义忽略选择器
+### postcss pxtovw-postcss
+
+```bash
+npm i postcss-loader pxtovw-postcss -D
+```
+
+
+
+> webpack.config.js
+
+```javascript
+  module.exports = {
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            { loader: 'css-loader', options: { importLoaders: 1 } },
+            'postcss-loader'
+          ]
+        }
+      ]
+    }
+  }
+```
+
+> postcss.config.js
+
+```javascript
+  module.exports = {
+    plugins: {
+      "pxtovw-postcss" : {
+          unitToConvert:'px', //Custom conversion unit
+          viewportWidth: 1080, //Viewport width
+          unitPrecision: 5, //retain decimal places
+          minPixelValue: 2 // minimum conversion value
+      }
+    }
+  }
+
+```
